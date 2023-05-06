@@ -24,10 +24,10 @@ namespace TDD_Sibala
                     Name = "Black",
                     Dices = new Dices(new List<Dice>
                     {
-                        new Dice {Value = 5, Output = "5"},
-                        new Dice {Value = 5, Output = "5"},
-                        new Dice {Value = 5, Output = "5"},
-                        new Dice {Value = 5, Output = "5"}
+                        new Dice(5,"5"),
+                        new Dice(5,"5"),
+                        new Dice(5,"5"),
+                        new Dice(5,"5")
                     })
                 }
             };
