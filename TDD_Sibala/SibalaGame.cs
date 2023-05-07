@@ -22,7 +22,6 @@
             }
 
             // Black wins. - with all of a kind: 5
-            // {winner name} wins. - with {description}
             return $"{winnerName} wins. - with {description}";
         }
     }
