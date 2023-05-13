@@ -29,6 +29,10 @@ namespace TDD_Sibala
 
         [Test]
         [TestCase("Black: 2 6 2 3  White: 5 3 5 4", "Black wins. - with normal point: 9")]
+        [TestCase("Black: 2 1 3 3  White: 2 2 1 3", "White wins. - with normal point: 4")]
+        [TestCase("Black: 2 3 4 2  White: 1 1 4 3", "Tie.")]
+        [TestCase("Black: 2 2 4 4  White: 2 3 2 1", "Black wins. - with normal point: 8")]
+        [TestCase("Black: 3 4 5 5  White: 4 1 4 6", "White wins. - with normal point: 7")]
         public void A02_SibalaGame_ShowResult_BothNormalPoint(string input, string expected)
         {
             var actual = _target.ShowResult(input);

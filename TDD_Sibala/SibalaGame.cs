@@ -22,6 +22,7 @@
             {
                 case CategoryType.AllOfAKind:
                     Dictionary<int, int> valueMap = new Dictionary<int, int> { { 1, 6 }, { 2, 1 }, { 3, 2 }, { 4, 5 }, { 5, 3 }, { 6, 4 } };
+
                     compareResult = valueMap[players[0].Dices.First().Value] - valueMap[players[1].Dices.First().Value];
                     break;
 
