@@ -33,6 +33,10 @@
                     var point2 = players[1].Dices.Except(pairDices2).Sum(d => d.Value);
 
                     compareResult = point1 - point2;
+                    if (compareResult == 0)
+                    {
+                        compareResult = players[0].Dices.Except(pairDices1).Max(d => d.Value) - players[1].Dices.Except(pairDices2).Max(d => d.Value);
+                    }
                     break;
             }
 

@@ -40,6 +40,15 @@ namespace TDD_Sibala
             AssertShowResultShouldReturn(actual, expected);
         }
 
+        [Test]
+        [TestCase("Black: 5 5 5 5  White: 4 1 4 6", "Black wins. - with all of a kind: 5")]
+        public void A03_SibalaGame_ShowResult_DifferentPoint(string input, string expected)
+        {
+            var actual = _target.ShowResult(input);
+
+            AssertShowResultShouldReturn(actual, expected);
+        }
+
         private static void AssertShowResultShouldReturn(string actual, string expected)
         {
             actual.Should().Be(expected);
