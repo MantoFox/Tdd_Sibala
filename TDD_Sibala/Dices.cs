@@ -15,11 +15,14 @@
                 {
                     return this.First().Output;
                 }
+                else if (this.GroupBy(x => x.Value).Any(g => g.Count() == 2))
+                {
+                    List<Dice> pairDices = this.GroupBy(dice => dice.Value).First(g => g.Count() == 2).ToList();
+                    var point = this.Except(pairDices).Sum(d => d.Value);
+                    return point.ToString();
+                }
 
-                List<Dice> pairDices = this.GroupBy(dice => dice.Value).First(g => g.Count() == 2).ToList();
-                var point = this.Except(pairDices).Sum(d => d.Value);
-
-                return point.ToString();
+                return string.Empty;
             }
         }
 
@@ -33,12 +36,16 @@
                     Description = "all of a kind"
                 };
             }
-
-            return new Category
+            else if (this.GroupBy(x => x.Value).Any(g => g.Count() == 2))
             {
-                Type = CategoryType.NormalPoint,
-                Description = "normal point"
-            };
+                return new Category
+                {
+                    Type = CategoryType.NormalPoint,
+                    Description = "normal point"
+                };
+            }
+
+            return null;
         }
     }
 }
