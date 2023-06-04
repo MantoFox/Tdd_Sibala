@@ -2,7 +2,7 @@
 {
     internal enum CategoryType
     {
-        AllOfAKind,
-        NormalPoint
+        AllOfAKind = 2,
+        NormalPoint = 1
     }
 }
