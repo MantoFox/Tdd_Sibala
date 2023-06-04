@@ -45,7 +45,11 @@
                 };
             }
 
-            return null;
+            return new Category
+            {
+                Type = CategoryType.NoPoint,
+                Description = string.Empty
+            }; ;
         }
     }
 }

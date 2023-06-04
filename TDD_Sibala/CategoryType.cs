@@ -3,6 +3,7 @@
     internal enum CategoryType
     {
         AllOfAKind = 2,
-        NormalPoint = 1
+        NormalPoint = 1,
+        NoPoint = 0
     }
 }

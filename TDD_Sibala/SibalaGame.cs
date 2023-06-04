@@ -63,7 +63,6 @@
                 return "Tie.";
             }
 
-            // Black wins. - with all of a kind: 5
             return $"{winnerName} wins. - with {description}";
         }
     }
