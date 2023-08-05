@@ -43,6 +43,8 @@ namespace TDD_Sibala.Test
         [TestCase("Black: 5 5 5 5  White: 4 1 4 6", "Black wins. - with all of a kind: 5")]
         [TestCase("Black: 3 1 3 8  White: 2 2 2 2", "White wins. - with all of a kind: 2")]
         [TestCase("Black: 2 5 1 5  White: 1 3 5 2", "Black wins. - with normal point: 3")]
+        [TestCase("Black: 3 3 3 6  White: 3 6 6 3", "White wins. - with normal point: 12")]
+        [TestCase("Black: 3 5 5 5  White: 4 1 3 6", "Tie.")]
         public void A03_SibalaGame_ShowResult_DifferentPoint(string input, string expected)
         {
             var actual = _target.ShowResult(input);
