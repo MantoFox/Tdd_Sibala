@@ -20,7 +20,16 @@ namespace TDD_Sibala.Test
         [TestCase("Black: 4 4 4 4  White: 5 5 5 5", "Black wins. - with all of a kind: 4")]
         [TestCase("Black: 6 6 6 6  White: 4 4 4 4", "White wins. - with all of a kind: 4")]
         [TestCase("Black: 4 4 4 4  White: 1 1 1 1", "White wins. - with all of a kind: 1")]
-        public void A01_SibalaGame_ShowResult(string input, string expected)
+        public void A01_SibalaGame_ShowResult_BothAllOfAKind(string input, string expected)
+        {
+            var actual = _target.ShowResult(input);
+
+            AssertShowResultShouldReturn(actual, expected);
+        }
+
+        [Test]
+        [TestCase("Black: 2 6 2 3  White: 5 3 5 4", "Black wins. - with normal point: 9")]
+        public void A02_SibalaGame_ShowResult_BothNormalPoint(string input, string expected)
         {
             var actual = _target.ShowResult(input);
             AssertShowResultShouldReturn(actual, expected);
