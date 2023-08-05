@@ -54,7 +54,7 @@
             else if (compareResult < 0)
             {
                 winnerName = players[1].Name;
-                description = $"{category1.Description}: {players[1].Dices.Output}";
+                description = $"{category2.Description}: {players[1].Dices.Output}";
             }
             else
             {
