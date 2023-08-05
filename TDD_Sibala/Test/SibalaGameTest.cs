@@ -14,11 +14,11 @@ namespace TDD_Sibala.Test
         }
 
         [Test]
-        public void A01_SibalaGame_ShowResult()
+        [TestCase("Black: 5 5 5 5  White: 2 2 2 2", "Black wins. - with all of a kind: 5")]
+        [TestCase("Black: 3 3 3 3  White: 6 6 6 6", "White wins. - with all of a kind: 6")]
+        public void A01_SibalaGame_ShowResult(string input, string expected)
         {
-            var actual = _target.ShowResult("Black: 5 5 5 5  White: 2 2 2 2");
-            var expected = "Black wins. - with all of a kind: 5";
-
+            var actual = _target.ShowResult(input);
             AssertShowResultShouldReturn(actual, expected);
         }
 
